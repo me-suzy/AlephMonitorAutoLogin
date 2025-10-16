@@ -1,0 +1,104 @@
+## ✅ DA, Exact!
+
+Executabilul face EXACT ce ai cerut:
+
+### 🔄 Când Serverul Cade
+
+1. Detectează automat că serverul nu răspunde (după 2 verificări consecutive)
+2. Se conectează automat la server cu credențialele SSH `root` / `YOUR-PASSWORD`
+3. Execută secvența de repornire:
+   - Setează data la 2012 (pentru licență)
+   - Așteaptă 30 secunde
+   - Deschide catalog online în browser
+   - Lansează Catalog.exe
+   - Setare data curentă (actuală)
+   - Redeschide catalog online
+
+### 📅 Despre Data Curentă
+
+Executabilul SETEAZĂ AUTOMAT data curentă în 2 momente:
+
+1. Înainte de repornire: Setează data la 2012 (pentru licența ALEPH)
+2. După repornire: RESETEAZĂ la data curentă (actuală)
+
+### 🎯 Secvența Completă
+
+```
+Server cade → Detectare automată → Conectare SSH → Data 2012 → 
+Repornire servicii → Catalog online → Catalog.exe → 
+DATA CURENTĂ → Verificare finală
+```
+
+### 💡 Rezultatul Final
+
+- Serverul este repornit
+- Data este resetată la actuală (nu rămâne la 2012)
+- Catalog online funcționează
+- Catalog.exe funcționează
+- Monitorizarea continuă
+
+Deci DA, serverul se va reporni automat și va avea data actuală la final! 🚀
+
+Aceasta este funcționalitatea principală - să repornească automat serverul când cade și să-l lase cu data curentă.
+------
+## 🚀 Ce Face Executabilul `AlephMonitor-AutoLogin.exe`
+
+Executabilul funcționează în felul următor:
+
+### 📱 1. La Pornire
+- Se deschide direct ecranul principal (fără formular de login)
+- Afișează titlul "🖥️ Server ALEPH - Monitor Automat"
+- Arată informațiile SSH: `87.176.171.72` cu utilizatorul `root`
+- Butonul mare "🚀 Pornire Monitor" este vizibil
+
+### 🔄 2. Când Apesi "Pornire Monitor"
+- Se loghează automat cu utilizatorul `admin` / `admin123`
+- Trece direct la ecranul de monitorizare
+- Afișează: "🟢 Monitor Activ" și "Utilizator: admin (Auto Login)"
+- Pornește monitorizarea automat
+
+### ⏰ 3. Monitorizare Continuă (La Fiecare 2 Minute)
+- Verifică serverul `http://87.176.171.72:8991/F`
+- Dacă serverul răspunde → afișează "🟢 Server Activ"
+- Dacă serverul NU răspunde → afișează "🟡 Server Nu Răspunde"
+
+### 🔧 4. Când Serverul Cade (După 2 Eșecuri Consecutive)
+- Afișează: "🔴 Server Căzut - Repornire..."
+- Execută automat secvența:
+
+```
+1. Conectare SSH cu root / YOUR-PASSWORD
+2. Setare dată 2012 pentru licență
+3. Așteptare 30 secunde
+4. Deschide catalog online în browser
+5. Lansează Catalog.exe cu admin / admin123
+6. Resetare dată curentă
+7. Redeschide catalog online
+8. Verificare finală
+```
+
+### 🎯 5. Funcționalități Disponibile
+- Buton "🔄 Repornire Manuală" → forțează repornirea imediat
+- Buton "🚪 Deconectare" → oprește monitorizarea
+- Jurnal Activitate → afișează toate operațiunile în timp real
+
+### 📋 6. Ce Se Întâmplă În Fundal
+- Logging în `aleph_monitor.log`
+- Verificări SSH cu credențialele `root` / `YOUR-PASSWORD`
+- Deschidere browser automat pentru catalog online
+- Autentificare automată în Catalog.exe cu `admin` / `admin123`
+
+### 🔑 7. Credențiale Folosite
+- SSH (pentru server): `root` / `YOUR-PASSWORD` ← CRITICE
+- Catalog (pentru aplicație): `admin` / `admin123` ← Implicit
+
+## 🎯 Rezumat Simplu
+
+Executabilul face exact ce ai cerut:
+1. Se deschide direct fără login
+2. Un buton "Pornire Monitor"
+3. Monitorizează automat serverul
+4. Repornește automat când serverul cade
+5. Folosește credențialele SSH `root` / `YOUR-PASSWORD` pentru acces la server
+
+Este o versiune simplificată care funcționează "din cutie" fără configurare! 🚀
